@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="25471.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div id="toggleButtons">
+            <h1>Engenharia de acesso</h1>
+            <button class="toggleBtn" data-target="SemDrop">Ativação-FTTX (SEM DROP)</button>
+            <button class="toggleBtn" data-target="ComDrop">Ativação-FTTX (COM DROP)</button>
+            <button class="toggleBtn" data-target="MudSemDropUP">MUD de Endereço UPGRADE(SEM DROP)</button>
+            <button class="toggleBtn" data-target="MudSemDrop">MUD de Endereço (SEM DROP)</button>
+            <button class="toggleBtn" data-target="MudComDropUP">MUD de Endereço UPGRADE(COM DROP)</button>
+            <button class="toggleBtn" data-target="MudComDrop">MUD de Endereço (COM DROP)</button>
+            <button class="toggleBtn" data-target="MudComDrop">Upgrade</button>
+            <button class="toggleBtn" data-target="Vlans">VLANS</button>
+            <button class="toggleBtn" data-target="Atenuacao">Atenuação</button>
+        </div>
+ <div id="formUpgradee" class="form-container hidden">
+            <h2>Upgrade</h2>
+            <form class="formContent" data-type="Upgradee">
+                    <label>Plano a ser contratado:
+                        <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+                        </select>
+                    </label>
+                    <div class="buttons-container">
+                        <button type="button" class="copiarBtn">Copiar informações</button>
+                        <button type="button" class="voltarBtn">Voltar</button>
+                    </div>
+            </form>
+        </div>
+
+        <div id="formSemDrop1" class="form-container hidden">
+            <h2>Ativação FTTX (SEM DROP)</h2>
+            <form class="formContent" data-type="SemDrop1">
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento mais próxima:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+
+                
+                    <label>Plano a ser contratado:
+                        <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+
+                        </select>
+                    </label>
+                    <label>01 ONU:
+                        <select class="onu">
+                            <option value="">Selecione</option>
+                            <option value="DATACOM">DATACOM</option>
+                            <option value="FIBERHOME">FIBERHOME</option>
+                        </select>
+                    </label>
+                    <label>01 PATCH CORD:
+                        <input type="text" value="Incluído" disabled>
+                    </label>
+                    <div class="buttons-container">
+                        <button type="button" class="copiarBtn">Copiar informações</button>
+                        <button type="button" class="voltarBtn">Voltar</button>
+                    </div>
+            </form>
+        </div>
+
+        <div id="formSemDrop" class="form-container hidden">
+            <h2>Ativação FTTX (SEM DROP)</h2>
+            <form class="formContent" data-type="SemDrop">
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Plano a ser contratado:
+                    <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+                    </select>
+                </label>
+                <label>01 ONU:
+                    <select class="onu">
+                        <option value="">Selecione</option>
+                        <option value="DATACOM">DATACOM</option>
+                        <option value="FIBERHOME">FIBERHOME</option>
+                    </select>
+                </label>
+                <label>01 PATCH CORD:
+                    <input type="text" value="Incluído" disabled>
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Ativação nova com DROP-->
+        <div id="formComDrop" class="form-container hidden">
+            <h2>Ativação FTTX (COM DROP)</h2>
+            <form class="formContent" data-type="ComDrop">
+                <label>Nome do DROP Existente:
+                    <input type="text" class="dropExistente" placeholder="NOME e SOBRENOME">
+                </label>
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Plano a ser contratado:
+                    <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+                    </select>
+                </label>
+                <label>01 ONU:
+                    <select class="onu">
+                        <option value="">Selecione</option>
+                        <option value="DATACOM">DATACOM</option>
+                        <option value="FIBERHOME">FIBERHOME</option>
+                    </select>
+                </label>
+                <label>01 PATCH CORD:
+                    <input type="text" value="Incluído" disabled>
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Mudança de endereço sem drop-->
+        <div id="formMudSemDrop" class="form-container hidden">
+            <h2>Mudança de endereço (SEM DROP)</h2>
+            <form class="formContent" data-type="MudSemDrop">
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Mudança de endereço sem drop UP-->
+        <div id="formMudSemDropUP" class="form-container hidden">
+            <h2>Mudança de endereço (SEM DROP)</h2>
+            <form class="formContent" data-type="MudSemDropUP">
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Plano a ser contratado:
+                    <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+                    </select>
+                </label>
+                <label>01 ONU:
+                    <select class="onu">
+                        <option value="">Selecione</option>
+                        <option value="DATACOM">DATACOM</option>
+                        <option value="FIBERHOME">FIBERHOME</option>
+                    </select>
+                </label>
+                <label>01 PATCH CORD:
+                    <input type="text" value="Incluído" disabled>
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Mudança de endereço com drop-->
+        <div id="formMudComDrop" class="form-container hidden">
+            <h2>Mudança de endereço (COM DROP)</h2>
+            <form class="formContent" data-type="MudComDrop">
+                <label>Nome do DROP Existente:
+                    <input type="text" class="dropExistente" placeholder="NOME e SOBRENOME">>
+                </label>
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+        <!--Mudança de endereço com drop UP-->
+        <div id="formMudComDropUP" class="form-container hidden">
+            <h2>Mudança de endereço (SEM DROP)</h2>
+            <form class="formContent" data-type="MudComDropUP">
+                <label>Tipo Caixa de Atendimento:
+                    <select class="tipoCaixaAtendimento">
+                        <option value="">Selecione</option>
+                        <option value="EMENDA 1/4">EMENDA 1/4</option>
+                        <option value="EMENDA 1/8">EMENDA 1/8</option>
+                        <option value="EMENDA 1/16">EMENDA 1/16</option>
+                        <option value="CTO 1/4">CTO 1/4</option>
+                        <option value="CTO 1/8">CTO 1/8</option>
+                        <option value="CTO 1/16">CTO 1/16</option>
+                    </select>
+                </label>
+                <label>Nome do DROP Existente:
+                    <input type="text" class="dropExistente" placeholder="NOME e SOBRENOME">>
+                </label>
+                <label>Caixa de Atendimento:
+                    <input type="text" class="caixaAtendimento" placeholder="CE-CDR-859">
+                </label>
+                <label>OLT:
+                    <input type="text" class="olt" placeholder="W S1 P16">
+                </label>
+                <label>Localização:
+                    <input type="text" class="localizacao" placeholder="https://www.google.com/maps/place/-27.02451868+-50.91953212">
+                </label>
+                <label>Sinal esperado do cliente:
+                    <input type="text" class="Sinal" placeholder="-23">
+                </label>
+                <label>Cabo Drop (metros):
+                    <input type="number" class="caboDrop" placeholder="119.5">
+                </label>
+                <label>Plano a ser contratado:
+                    <select class="plano">
+                            <option value="">Selecione</option>
+                            <option value="Sem roteador">GGNET FIBRA BASIC</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS EMPRESAS 400Mbps</option>
+                            <option value="WS5200 V3 ou AX2">GGNET COMBO EXTREME INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO EXTREME INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2">GGNET COMBO SILVER PLUS INTERNET 850Mbps</option>
+                            <option value="1 - Roteador WS5200s.">GGNET COMBO MESH INTERNET 400Mbps</option>
+                            <option value="1 - Roteador AX2.">GGNET COMBO MESH INTERNET 500Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO MESH INTERNET 600Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO SUPER MESH INTERNET 800Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM INTERNET 550Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 700Mbps</option>
+                            <option value="1 ONT ou 1 AX2.">GGNET COMBO DREAM PLUS INTERNET 850Mbps</option>
+                            <option value="1 ONT ou 1 AX2">ENTERPRISE PLUS</option>
+                            <option value="1 RB 750 Gr3 + EAP ou UNIFI">ENTERPRISE PRÓ</option>
+                    </select>
+                </label>
+                <label>01 ONU:
+                    <select class="onu">
+                        <option value="">Selecione</option>
+                        <option value="DATACOM">DATACOM</option>
+                        <option value="FIBERHOME">FIBERHOME</option>
+                    </select>
+                </label>
+                <label>01 PATCH CORD:
+                    <input type="text" value="Incluído" disabled>
+                </label>
+                <label>Precisa identificar cliente?
+                    <select class="identificarCliente">
+                        <option value="">Selecione</option>
+                        <option value="SIM">SIM</option>
+                        <option value="NAO">NÃO</option>
+                    </select>
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="formVlans" class="form-container hidden">
+            <h2>VLANS</h2>
+            <form class="formContent" data-type="Vlans">
+                <label>Selecionar Cidade:
+                    <select class="cidade" onchange="atualizarSlots(this.value)">
+                        <option value="">Selecione a cidade</option>
+                        <option value="CDR-Z">CDR-Z</option>
+                        <option value="RSL-Z">RSL-Z</option>
+                        <option value="CNI-Z">CNI-Z</option>
+                        <option value="IRR">IRR</option>
+                        <!-- Adicione mais opções de cidades conforme necessário -->
+                    </select>
+                </label>
+                <label>SLOT:
+                    <select class="slot" onchange="mostrarLista(this)">
+                        <option value="">Selecione o SLOT</option>
+                        <!-- As opções serão atualizadas dinamicamente -->
+                    </select>
+                </label>
+                <div id="listaElementos" class="hidden">
+                    <h3>Vlans</h3>
+                    <ul class="elementos">
+                        <!-- Elementos serão adicionados dinamicamente aqui -->
+                    </ul>
+                </div>
+                <div class="buttons-container">
+                    <button type="button" class="voltarBtn" onclick="voltar()">Voltar</button>
+                </div>
+            </form>
+        </div>
+        
+        
+        <!--Atenuação-->
+        <div id="formAtenuacao" class="form-container hidden">
+            <h2>ATENUAÇÃO</h2>
+            <form class="formContent" data-type="Atenuacao">
+                <label>Atenuado caixa:
+                    <input type="text" class="atenuadoCaixa" placeholder="CE-CDR-859">
+                </label>
+                <label>Utilizado vaga de:
+                    <input type="text" class="usadoVaga" placeholder="NOME e SOBRENOME">
+                </label>
+                <div class="buttons-container">
+                    <button type="button" class="copiarBtn">Copiar informações</button>
+                    <button type="button" class="voltarBtn">Voltar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        Fon
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
