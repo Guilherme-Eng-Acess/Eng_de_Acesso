@@ -1,0 +1,161 @@
+/* Estilo básico do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0D0D0D;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background-color: #262626;
+    padding: 10px; /* Reduzido */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 20px; /* Reduzido */
+    margin-bottom: 8px; /* Reduzido */
+    color: #cecece;
+}
+
+/* Estilo dos botões principais */
+button {
+    display: inline-block;
+    width: 45%;
+    padding: 6px; /* Reduzido */
+    margin: 4px 2%; /* Reduzido */
+    background-color: #0D0D0D;
+    color: #cecece;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* Container dos formulários */
+.form-container {
+    margin-top: 8px; /* Reduzido */
+}
+
+/* Esconde o formulário */
+.hidden {
+    display: none;
+}
+
+/* Estilo dos rótulos */
+label {
+    display: block;
+    text-align: left;
+    margin: 4px 0 2px; /* Reduzido */
+    color: #cecece;
+}
+
+#listaElementos {
+    color: white;
+}
+
+
+/* Estilo dos campos de entrada */
+input, select {
+    width: calc(100% - 18px); /* Reduzido */
+    padding: 5px; /* Reduzido */
+    margin: 4px 0; /* Mantido */
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-size: 13px; /* Reduzido */
+    color:#cecece;
+    background-color: #404040;
+}
+
+/* Estilo do botão de submissão */
+form button {
+    background-color: #0D0D0D;;
+    width: 100%;
+    padding: 6px; /* Reduzido */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form button:hover {
+    background-color: #000000;
+}
+
+/* Estilo das seções do formulário */
+h2 {
+    font-size: 16px; /* Reduzido */
+    color: #cecece;
+    margin-bottom: 6px; /* Mantido */
+}
+
+.buttons-container {
+    display: flex;
+    gap: 8px; /* Reduzido */
+    margin-top: 8px; /* Reduzido */
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 8px; /* Reduzido */
+    }
+
+    h1 {
+        font-size: 18px; /* Reduzido */
+    }
+
+    button {
+        width: 100%;
+        margin: 4px 0; /* Reduzido */
+        font-size: 14px;
+        padding: 8px; /* Reduzido */
+        cursor: pointer;
+    }
+
+    input, select {
+        width: calc(100% - 14px); /* Reduzido */
+        padding: 5px; /* Reduzido */
+    }
+
+    form button {
+        padding: 5px; /* Reduzido */
+    }
+
+    h2 {
+        font-size: 14px; /* Reduzido */
+    }
+}
